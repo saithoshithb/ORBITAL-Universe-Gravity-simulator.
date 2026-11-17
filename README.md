@@ -13,6 +13,14 @@ npm run build   # typecheck + production build
 
 Needs Node 20+ (developed on Node 26).
 
+## Deploy (GitHub Pages)
+
+`.github/workflows/deploy.yml` runs the tests, builds, and publishes `dist/` to GitHub Pages on
+every push to `main`. One-time setup in the GitHub repo: **Settings → Pages → Build and
+deployment → Source: GitHub Actions**. The site then appears at
+`https://<user>.github.io/<repo>/`. The build uses relative asset paths, so it works under any
+repo name. Everything runs in the visitor's browser; saved setups stay in their own browser.
+
 ## Architecture
 
 ```
